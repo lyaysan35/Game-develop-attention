@@ -31,3 +31,7 @@ body {
 #start {
  text-align: center;
 }
+
+.option {
+	display: inline-block;
+}
