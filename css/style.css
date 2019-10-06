@@ -1,0 +1,33 @@
+h1 {
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+	color: black;
+	font-size: 60px;
+}
+
+body {
+	/*background-color: #F2F0FF;*/
+	background-image: url("https://www.2do2go.ru/uploads/3452980e5e6c96e044f6efa248d74de5.jpg");
+    /*background-image: url("https://pbs.twimg.com/media/D_L7fv9X4AEBeaY.jpg:large");*/
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+#start-button {
+	font-family: font-family: 'Dancing Script', cursive;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    background-color: #1A9900; 
+    width:150px;
+    height:70px;
+    text-align: center;
+    margin-top: 100px;
+
+} 
+
+#start {
+ text-align: center;
+}
