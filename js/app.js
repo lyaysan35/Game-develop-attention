@@ -28,6 +28,19 @@ function setTimer() {
 	}, 1000 * 5);
 }
 
+// function setTimer() {
+// 	const interval = setTimeout(() => {
+// 		document.querySelector('.quest-pic1').style.display = 'none';
+// 		const div = document.createElement('div');
+// 		div.id = 'questions';
+// 		document.querySelector('body').appendChild(div);
+// 		displayQuestion(div);
+// 		clearInterval(interval);
+// 	}, 1000);
+// }
+
+
+
 function displayQuestion(div) {
 	const prompt = questions[Math.floor(Math.random() * questions.length)];
 	const question = prompt.q;
@@ -35,11 +48,13 @@ function displayQuestion(div) {
 
 	const label1 = document.createElement('label');
 	label1.textContent = prompt.q;
-	div.appendChild(label1);
 
+	div.appendChild(label1);
+    const form = document.createElement('form');
 	for(let i = 0; i < prompt.c.length; i++) {
 		const section = document.createElement('section');
-		div.appendChild(section);
+
+		
 
 		// Add radio button to select choice
 		let select = document.createElement('input');
@@ -56,11 +71,43 @@ function displayQuestion(div) {
 
 		// Append text description to form div
 		section.appendChild(choice);
+		const br = document.createElement('br');
+		section.appendChild(br);
+         form.appendChild(section);
+
 		choice.className = 'option';
+
+
+		
+
+
 	}
+let submit = document.createElement('input');
+		submit.type = 'submit';
+		submit.id = 'subm';
+		submit.className = 'answer';
+		submit.textContent = 'Submit';
+		form.appendChild(submit);
+		div.appendChild(form);
 
 
 }
+
+// function submit (div) {
+// 		let submit = document.createElement('input');
+// 		submit.type = 'Submit';
+// 		submit.id = 'subm';
+// 		submit.className = 'answer';
+// 		submit.textContent = 'Submit';
+// 		div.appendChild(submit);
+// }
+
+// document.querySelector('#subm').addEventListener('click', function() {
+//  submit ()
+
+//
+//  document.querySelector('section').appendChild(div);
+// });
 
 
 
@@ -87,6 +134,8 @@ class guessPict {
 		image.style.height = "50%";
 		document.querySelector("#pict").appendChild(image);
 		document.querySelector("h1").style.color = "blue";
+		document.body.style.backgroundColor = "#CCE5FF";
+
 
 	}
 }
@@ -94,4 +143,20 @@ class guessPict {
 document.querySelector('#start-button').addEventListener('click', function() {
 	startGame();
 });
+
+// trying to make submit button for questions
+// document.querySelector('#submit').addEventListener('click', function() {
+//  submit ()
+//  document.querySelector('section').appendChild(div);
+// });
+
+
+
+
+
+
+
+
+
+
 
