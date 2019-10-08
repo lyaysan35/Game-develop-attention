@@ -7,6 +7,9 @@ const questions = [
 	{ q: "In which row did the bird appear?", a: 0 , c: [2,1,4,3] }
 ];
 
+const numbquest = questions.length;
+
+var score = 0;
 
 function startGame () {
 	const imag1 = new guessPict();
@@ -89,6 +92,8 @@ function displayQuestion(div) {
 
 
 	}
+
+
 	let submit = document.createElement('button');
 		submit.id = 'submit';
 		submit.className = 'answer';
@@ -102,17 +107,24 @@ function displayQuestion(div) {
 
 		if(parseInt(playerChoice[0].id) === prompt.a) {
 			console.log('correct');
-			// increase score
+			score++;
 		} else {
 			console.log('not correct');
 		}
 		if(questions.length > 0) {
 			displayQuestion(div);
 		} else {
+			gameOver();
 			// TODO: function to tell player the game is over and display score
 		}
 	});
 
+}
+
+function gameOver() {
+	
+	alert("Your final score is " + score +" out of " + numbquest);
+	return score;
 }
 
 
