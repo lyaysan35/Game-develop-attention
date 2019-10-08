@@ -42,15 +42,22 @@ function setTimer() {
 
 
 function displayQuestion(div) {
-	const prompt = questions[Math.floor(Math.random() * questions.length)];
+	div.innerHTML = '';
+	const index = Math.floor(Math.random() * questions.length);
+	const prompt = questions[index];
 	const question = prompt.q;
 	const choices = prompt.c;
+
+	// remove element from questions list so we don't ask the same question
+	// more than once
+	questions.splice(index, 1);
 
 	const label1 = document.createElement('label');
 	label1.textContent = prompt.q;
 
+
 	div.appendChild(label1);
-    const form = document.createElement('form');
+    const form = document.createElement('div');
 	for(let i = 0; i < prompt.c.length; i++) {
 		const section = document.createElement('section');
 
@@ -73,7 +80,7 @@ function displayQuestion(div) {
 		section.appendChild(choice);
 		const br = document.createElement('br');
 		section.appendChild(br);
-         form.appendChild(section);
+        form.appendChild(section);
 
 		choice.className = 'option';
 
@@ -82,28 +89,52 @@ function displayQuestion(div) {
 
 
 	}
-let submit = document.createElement('input');
-		submit.type = 'submit';
-		submit.id = 'subm';
+	let submit = document.createElement('button');
+		submit.id = 'submit';
 		submit.className = 'answer';
 		submit.textContent = 'Submit';
 		form.appendChild(submit);
 		div.appendChild(form);
 
+	//submit button and checking correct answers
+	submit.addEventListener('click', function () {
+		let playerChoice = Array.from(document.querySelectorAll('.option')).filter(function(b) { return b.checked });
+
+		if(parseInt(playerChoice[0].id) === prompt.a) {
+			console.log('correct');
+			// increase score
+		} else {
+			console.log('not correct');
+		}
+		if(questions.length > 0) {
+			displayQuestion(div);
+		} else {
+			// TODO: function to tell player the game is over and display score
+		}
+	});
 
 }
 
-// function submit (div) {
-// 		let submit = document.createElement('input');
-// 		submit.type = 'Submit';
-// 		submit.id = 'subm';
-// 		submit.className = 'answer';
-// 		submit.textContent = 'Submit';
-// 		div.appendChild(submit);
+
+//  }
+
+
+
+
+// const answer = prompt.a;
+ // answer.id  = question.a
+// let score = 0;
+// document.querySelector(form).addEventListener('click', function() {
+//    if(prompt.q === prompt.a[i]){
+//    	score = score ++;
+//   }
+//   else {
+//   	score = score --;
+//   }
+
+
 // }
 
-// document.querySelector('#subm').addEventListener('click', function() {
-//  submit ()
 
 //
 //  document.querySelector('section').appendChild(div);
