@@ -114,21 +114,45 @@ function displayQuestion(div) {
 		if(questions.length > 0) {
 			displayQuestion(div);
 		} else {
-			gameOver();
+			gameOver(div);
 			// TODO: function to tell player the game is over and display score
 		}
 	});
 
 }
 
-function gameOver() {
-	
-	alert("Your final score is " + score +" out of " + numbquest);
-	return score;
+function gameOver(div) {
+	div.innerHTML = '';
+	const endGame = document.createElement('section');
+	endGame.id = 'end-game';
+	endGame.innerHTML = 'Your score is ' + score +' out of ' + numbquest;
+	if(score === numbquest) {
+		congratulate();
+	}
+	div.appendChild(endGame);
+	// alert("Your final score is " + score +" out of " + numbquest);
+	// return score;
 }
 
+function congratulate(parent) {
+	console.log('you win');
+ const word = document.createElement('div');
+  word.className = 'congr';
+  word.id = 'win';
+  word.innerHTML = 'Congratulations!';
+  document.querySelector('body').appendChild(word);
 
-//  }
+
+
+ const image = document.createElement('img');
+		image.src = "pict/child.jpg";
+		image.className = "endjpg";
+		image.style.width = "40%";
+		image.style.height = "40%";
+		document.querySelector("#win ").appendChild(image);
+
+}
+
 
 
 

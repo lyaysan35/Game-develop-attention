@@ -7,7 +7,8 @@ h1 {
 
 body {
 	/*background-color: #F2F0FF;*/
-	background-image: url("https://www.2do2go.ru/uploads/3452980e5e6c96e044f6efa248d74de5.jpg");
+	/*background-image: url("https://www.2do2go.ru/uploads/3452980e5e6c96e044f6efa248d74de5.jpg");*/
+	background-image: url(../pict/back.jpg);
     /*background-image: url("https://pbs.twimg.com/media/D_L7fv9X4AEBeaY.jpg:large");*/
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -58,3 +59,26 @@ div {
 	text-align: left;
 
 }
+
+#end-game {
+	font-family: 'Indie Flower', cursive;
+	color: #ff6600;
+	font-size: 40px;
+	text-align: center;
+}
+
+.endjpg {
+	/*background-position: center;*/
+	 margin: 10px auto 20px;
+	 display: block;
+}
+ #win {
+ 	text-align: center;
+ 	font-size: 50px;
+ 	color: #9900cc;
+ 	font-family: 'Dancing Script', cursive;
+ 	/*font-family: 'Monoton', cursive;
+    font-family: 'Mountains of Christmas', cursive;*/
+ }
+
+
