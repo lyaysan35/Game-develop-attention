@@ -71,6 +71,7 @@ function displayQuestion(div) {
 		select.type = 'radio';
 		select.id = i;
 		select.className = 'option';
+		select.setAttribute('name','option-radio');
 
 		// Append radio button to form div
 		section.appendChild(select);
@@ -115,7 +116,7 @@ function displayQuestion(div) {
 			displayQuestion(div);
 		} else {
 			gameOver(div);
-			// TODO: function to tell player the game is over and display score
+			//  function to tell player the game is over and display score
 		}
 	});
 
@@ -134,7 +135,7 @@ function gameOver(div) {
 	// return score;
 }
 
-function congratulate(parent) {
+function congratulate() {
 	console.log('you win');
  const word = document.createElement('div');
   word.className = 'congr';
