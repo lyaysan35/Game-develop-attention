@@ -75,7 +75,8 @@ div {
  #win {
  	text-align: center;
  	font-size: 50px;
- 	color: #9900cc;
+ 	color: #cc0000;
+ 	/*color: #9900cc;*/
  	font-family: 'Dancing Script', cursive;
  	/*font-family: 'Monoton', cursive;
     font-family: 'Mountains of Christmas', cursive;*/

@@ -149,6 +149,8 @@ function congratulate(parent) {
 		image.className = "endjpg";
 		image.style.width = "40%";
 		image.style.height = "40%";
+		document.body.style.backgroundColor = "white";
+		document.querySelector("h1").style.color = "#cc66ff";
 		document.querySelector("#win ").appendChild(image);
 
 }
