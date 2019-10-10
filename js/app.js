@@ -144,7 +144,6 @@ function congratulate() {
   document.querySelector('body').appendChild(word);
 
 
-
  const image = document.createElement('img');
 		image.src = "pict/child.jpg";
 		image.className = "endjpg";
@@ -153,33 +152,9 @@ function congratulate() {
 		document.body.style.backgroundColor = "white";
 		document.querySelector("h1").style.color = "#cc66ff";
 		document.querySelector("#win ").appendChild(image);
+	}
 
-}
-
-
-
-
-
-// const answer = prompt.a;
- // answer.id  = question.a
-// let score = 0;
-// document.querySelector(form).addEventListener('click', function() {
-//    if(prompt.q === prompt.a[i]){
-//    	score = score ++;
-//   }
-//   else {
-//   	score = score --;
-//   }
-
-
-// }
-
-
-//
-//  document.querySelector('section').appendChild(div);
-// });
-
-
+		
 
 
 
