@@ -28,19 +28,9 @@ function setTimer() {
 		document.querySelector('body').appendChild(div);
 		displayQuestion(div);
 		clearInterval(interval);
-	}, 1000 * 5);
+	}, 1000 * 60);
 }
 
-// function setTimer() {
-// 	const interval = setTimeout(() => {
-// 		document.querySelector('.quest-pic1').style.display = 'none';
-// 		const div = document.createElement('div');
-// 		div.id = 'questions';
-// 		document.querySelector('body').appendChild(div);
-// 		displayQuestion(div);
-// 		clearInterval(interval);
-// 	}, 1000);
-// }
 
 
 
@@ -189,11 +179,7 @@ document.querySelector('#start-button').addEventListener('click', function() {
 	startGame();
 });
 
-// trying to make submit button for questions
-// document.querySelector('#submit').addEventListener('click', function() {
-//  submit ()
-//  document.querySelector('section').appendChild(div);
-// });
+
 
 
 
